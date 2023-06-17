@@ -53,3 +53,9 @@ https://stackoverflow.com/questions/69553369/how-to-access-the-original-case-sen
 
 IF you add dependencies on external libraries you will need to have them added to the providers directory explicitly as they won't be loadable through the normal route
 You can do this in container/pom.xml under the maven-dependency-plugin plugin
+
+Sycn with upstream
+
+git@github.com:inventage/keycloak-custom.git
+git fetch upstream
+git merge upstream/main
