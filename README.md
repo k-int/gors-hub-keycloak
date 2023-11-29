@@ -17,7 +17,7 @@ Please see the tutorial [building a custom Keycloak container image](https://key
 [Keycloak.X]: https://www.keycloak.org/migration/migrating-to-quarkus
 
 
-Reshare-hub specific keycloak with plugins for LMS authn and other config
+OpenRS-hub specific keycloak with plugins for LMS authn and other config
 
 
 In development, after checkout create a
