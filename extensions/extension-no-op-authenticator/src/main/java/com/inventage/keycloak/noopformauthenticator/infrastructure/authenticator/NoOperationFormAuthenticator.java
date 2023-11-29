@@ -8,9 +8,6 @@ import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.RealmModel;
 import org.keycloak.models.UserModel;
 
-import javax.ws.rs.core.MultivaluedMap;
-
-
 /**
  *
  * see https://freemarker.apache.org/docs/index.html
@@ -32,11 +29,6 @@ public class NoOperationFormAuthenticator implements Authenticator {
     @Override
     public void action(AuthenticationFlowContext authenticationFlowContext) {
         LOG.debugf("action");
-        final MultivaluedMap<String, String> decodedFormParameters = authenticationFlowContext.getHttpRequest().getDecodedFormParameters();
-        if (decodedFormParameters.containsKey(LIVING_PLACE_PARAMETER)) {
-            final String livingPlace = decodedFormParameters.getFirst(LIVING_PLACE_PARAMETER);
-            LOG.debugf("action: received value of parameter '%s': '%s'", LIVING_PLACE_PARAMETER, livingPlace);
-        }
         authenticationFlowContext.success();
     }
 
